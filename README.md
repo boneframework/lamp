@@ -6,7 +6,7 @@ A Dockerised LAMP stack
  - Docker based Linux server
  - Apache with self signed SSL certificate
  - MariaDB
- - PHP 8.1 and modules (see https://github.com/delboy1978uk/dockerhub/blob/master/php81/Dockerfile)
+ - PHP 8.3 and modules (see https://github.com/delboy1978uk/dockerhub/blob/master/php83/Dockerfile)
  - MailHog (port 1025 send, port 8025 in browser)
  - NodeJs 18
  
@@ -14,8 +14,6 @@ A Dockerised LAMP stack
  
 ### setup
 There is a placeholder `public/index.php` in the `code` directory, from which Apache serves your site. You can delete that, and drop in (or symlink) your existing projects into the `code` directory.
-
-If you are using the `feature/react` branch of this repository, note that the PHP code will go in `code/backend` and not just code, and the react app will go in `code/frontend`.
  
 ### starting the server
 Simply `cd` into the folder you cloned into and type
@@ -24,7 +22,7 @@ bin/start
 ``` 
 Apache logs etc will scroll by, leave this terminal open while you do your work. 
 
-You can browse to `https://localhost`, or `https://awesome.scot` (if you added to your `/etc/hosts`, see below, you can customise this domain)
+You can browse to `https://localhost`, or `https://awesome.bone` (if you added to your `/etc/hosts`, see below, you can customise this domain)
 
 ### running CLI commands
 To run commands such as composer from the terminal that are in your Docker box, you can use the run command:
@@ -48,7 +46,7 @@ If you change the docker config (see belw), you can quickly rebuild using this:
 bin/rebuild
 ```
 Finally, there is an empty script which you can use to perform any of your initial setup tasks, typical examples 
-could include running composer install, performing database migrations, populating fixtures,  and warming up caches.
+could include running composer install, performing database migrations, populating fixtures, and warming up caches.
 ```
 bin/init
 ```
@@ -59,16 +57,16 @@ and displaying the logs. Press `CTRL-C` to quit, then run the following to tidy 
 bin/stop
 ```
  ### virtual host
- Apache is set up to serve `awesome.scot` with a self signed SSL certificate in your browser (or you can change the name in `docker-compose.yml` and rebuild)
+ Apache is set up to serve `awesome.bone` with a self signed SSL certificate in your browser (or you can change the name in `docker-compose.yml` and rebuild)
  Edit your `/etc/hosts` file on your computer (`C:\Windows\system32\drivers\etc\hosts` on Windows), adding this line:
  ```
- 127.0.0.1 awesome.scot
+ 127.0.0.1 awesome.bone
  ```
 ### customising the setup
 You customise the setup if you need to. PHP and Apache Dockerfiles can be found in the `build` folder. 
 
 You will notice a file named ssmtp.conf. This LAMP stack uses Mailhog, so you can check all would-have-been-sent emails 
-by going to `awesome.scot:8025`.
+by going to `awesome.bone:8025`.
 
 There is a `.env` file which you add to
 

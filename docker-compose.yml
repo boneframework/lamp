@@ -5,7 +5,7 @@ volumes:
         driver: local
 
 services:
-    awesome.scot:
+    awesome.bone:
         build:
             context: ./build
             dockerfile: ./httpd/Dockerfile
