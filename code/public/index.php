@@ -524,7 +524,7 @@
                     <br><br><br>
                     <img src="/img/skull_and_crossbones.png" />
                     <h1 class="brand-heading">Dock of the Bay</h1>
-                    <code>Apache Server on host awesome.bone ports 80 & 443</code>
+                    <code>Apache Server on host <?= $_ENV['DOMAIN_NAME'] ;?> ports 80 & 443</code>
                     <code>Maria DB with database <?= $database ;?> on host <?= $host ;?> port 3306</code>
                     <code>DB user <?= $user ;?> with password <?= $password ;?></code><br>
                     <code>MailHog on host awesome.bone ports SMTP 1025 HTTP 8025</code><br>

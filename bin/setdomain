@@ -12,6 +12,11 @@ echo "Old domain is $DOMAIN_NAME, changing to $1"
 cat .env | sed -e "s/DOMAIN_NAME=$DOMAIN_NAME/DOMAIN_NAME=$1/" > tmp && mv tmp .env
 cat docker-compose.yml | sed -e "s/    $DOMAIN_NAME:/    $1:/" > tmp && mv tmp docker-compose.yml
 cat build/httpd/httpd-vhosts.conf | sed -e "s/    ServerName $DOMAIN_NAME/    ServerName $1/" > tmp && mv tmp build/httpd/httpd-vhosts.conf
+
+if [[ -f "code/.env" ]]; then
+    cat code/.env | sed -e "s/DOMAIN_NAME=$DOMAIN_NAME/DOMAIN_NAME=$1/" > tmp && mv tmp code/.env
+fi
+
 echo 'Files changed, performing rebuild...'
 bin/rebuild
 echo ''
