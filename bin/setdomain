@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+if [ -z $1 ]; then
+  echo 'usage:'
+  echo 'setdomain [new domain name]'
+  exit 1
+fi
+
+source .env
+echo "Old domain is $DOMAIN_NAME, changing to $1"
+
+cat .env | sed -e "s/DOMAIN_NAME=$DOMAIN_NAME/DOMAIN_NAME=$1/" > tmp && mv tmp .env
+cat docker-compose.yml | sed -e "s/    $DOMAIN_NAME:/    $1:/" > tmp && mv tmp docker-compose.yml
+cat build/httpd/httpd-vhosts.conf | sed -e "s/    ServerName $DOMAIN_NAME/    ServerName $1/" > tmp && mv tmp build/httpd/httpd-vhosts.conf
+echo 'Files changed, performing rebuild...'
+bin/rebuild
+echo ''
+echo 'Please add the following to your /etc/hosts file:'
+echo ''
+echo "127.0.0.1 $1"
+echo ''

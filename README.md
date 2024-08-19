@@ -13,6 +13,12 @@ A Dockerised LAMP stack
  If you've never used Docker before, see the instructions below.code
  
 ### setup
+#### domain
+Firstly, the default domain name is `awesome.bone`. You'll probably want to change that to something else, so run
+```
+bin/setdomain dev.mycoolsite.com`
+```
+#### your code
 There is a placeholder `public/index.php` in the `code` directory, from which Apache serves your site. You can delete that, and drop in (or symlink) your existing projects into the `code` directory.
  
 ### starting the server
@@ -22,7 +28,8 @@ bin/start
 ``` 
 Apache logs etc will scroll by, leave this terminal open while you do your work. 
 
-You can browse to `https://localhost`, or `https://awesome.bone` (if you added to your `/etc/hosts`, see below, you can customise this domain)
+You can browse to `https://localhost`, or `https://awesome.bone` (if you added to your `/etc/hosts` file)
+
 
 ### running CLI commands
 To run commands such as composer from the terminal that are in your Docker box, you can use the run command:
