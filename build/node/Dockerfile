@@ -1,3 +1,3 @@
-FROM node:18.6
+FROM node:20.14
 
 WORKDIR /var/www/html
