@@ -46,9 +46,9 @@ services:
             - ./build/data:/docker-entrypoint-initdb.d
             - db_data:/var/lib/mysql
         environment:
-            MYSQL_ROOT_PASSWORD: '[123456]'
-            MYSQL_USER: dbuser
-            MYSQL_PASSWORD: '[123456]'
+            MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+            MYSQL_USER: '${MYSQL_USER}'
+            MYSQL_PASSWORD: '${MYSQL_PASSWORD}'
         ports:
             - 3306:3306
 

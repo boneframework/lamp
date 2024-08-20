@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# usage `query [SQL]`
+source .env
+command="mariadb --user=$MYSQL_USER --password=\"$MYSQL_ROOT_PASSWORD\" --database=awesome --execute=\"$@\""
+docker compose --env-file=.env exec -it mariadb bash -c "$command"
