@@ -10,8 +10,9 @@ RUN mkdir -p /etc/ssl/certs
 RUN mkdir -p /tmp_certs
 
 COPY ./certificates/* /tmp_certs
-RUN if [[ -e /tmp_certs/selfsigned.crt ]]; then \
-       if [[ - e /tmp_certs/selfsigned.key]] ; then \
+
+RUN if [ -e /tmp_certs/selfsigned.crt ]; then \
+       if [ -e /tmp_certs/selfsigned.key ] ; then \
           cp /tmp_certs/selfsigned.key /etc/ssl/certs/selfsigned.key; \
           cp /tmp_certs/selfsigned.crt /etc/ssl/certs/selfsigned.crt; \
        else \
