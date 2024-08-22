@@ -503,7 +503,7 @@
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <li class="page-scroll">
-                    <a target="_blank" href="http://awesome.bone:8025/"><i class="fa fa-envelope"></i> MailHog</a>
+                    <a target="_blank" href="http://boneframework.docker:8025/"><i class="fa fa-envelope"></i> MailHog</a>
                 </li>
                 <li class="page-scroll">
                     <a target="_blank" href="https://github.com/delboy1978uk/lamp"><i class="fa fa-github"></i> Fork</a>
@@ -527,7 +527,7 @@
                     <code>Apache Server on host <?= $_ENV['DOMAIN_NAME'] ;?> ports 80 & 443</code>
                     <code>Maria DB with database <?= $database ;?> on host <?= $host ;?> port 3306</code>
                     <code>DB user <?= $user ;?> with password <?= $password ;?></code><br>
-                    <code>MailHog on host awesome.bone ports SMTP 1025 HTTP 8025</code><br>
+                    <code>MailHog on host boneframework.docker ports SMTP 1025 HTTP 8025</code><br>
                     <code>XDebug running on port 9003</code>
                     <br>&nbsp;<br>
                     <a class="btn btn-info" href="/info.php"><i class="fa fa-info-circle"></i> PHP Info</a>

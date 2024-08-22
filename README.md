@@ -14,7 +14,7 @@ A Dockerised LAMP stack
  
 ### setup
 #### domain
-Firstly, the default domain name is `awesome.bone`. You'll probably want to change that to something else, so run
+Firstly, the default domain name is `boneframework.docker`. You'll probably want to change that to something else, so run
 ```
 bin/setdomain dev.mycoolsite.com`
 ```
@@ -28,7 +28,7 @@ bin/start
 ``` 
 Apache logs etc will scroll by, leave this terminal open while you do your work. 
 
-You can browse to `https://localhost`, or `https://awesome.bone` (if you added to your `/etc/hosts` file)
+You can browse to `https://localhost`, or `https://boneframework.docker` (if you added to your `/etc/hosts` file)
 
 
 ### running CLI commands
@@ -64,16 +64,16 @@ and displaying the logs. Press `CTRL-C` to quit, then run the following to tidy 
 bin/stop
 ```
  ### virtual host
- Apache is set up to serve `awesome.bone` with a self signed SSL certificate in your browser (or you can change the name in `docker-compose.yml` and rebuild)
+ Apache is set up to serve `boneframework.docker` with a self signed SSL certificate in your browser (or you can change the name in `docker-compose.yml` and rebuild)
  Edit your `/etc/hosts` file on your computer (`C:\Windows\system32\drivers\etc\hosts` on Windows), adding this line:
  ```
- 127.0.0.1 awesome.bone
+ 127.0.0.1 boneframework.docker
  ```
 ### customising the setup
 You customise the setup if you need to. PHP and Apache Dockerfiles can be found in the `build` folder. 
 
 You will notice a file named ssmtp.conf. This LAMP stack uses Mailhog, so you can check all would-have-been-sent emails 
-by going to `awesome.bone:8025`.
+by going to `boneframework.docker:8025`.
 
 There is a `.env` file which you add to
 
