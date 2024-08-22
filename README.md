@@ -18,6 +18,13 @@ Firstly, the default domain name is `boneframework.docker`. You'll probably want
 ```
 bin/setdomain dev.mycoolsite.com`
 ```
+#### ssl certificate
+A self signed SSL certificate will be generated, however if you already have a certificate and key that you would like
+that to be used instead, please copy and rename them to `build/certificates/selfsigned.crt` and 
+`build/certificates/selfsigned.key`. 
+
+If you wish to replace the certificates in the future, delete the old ones and 
+replace them with your new ones, and then run `bin/rebuild`.
 #### your code
 There is a placeholder `public/index.php` in the `code` directory, from which Apache serves your site. You can delete that, and drop in (or symlink) your existing projects into the `code` directory.
  
