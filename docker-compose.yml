@@ -7,6 +7,8 @@ services:
         build:
             context: ./build
             dockerfile: ./httpd/Dockerfile
+            args:
+                DOMAIN_NAME: '${DOMAIN_NAME}'
         ports:
             - 80:80
             - 443:443
@@ -22,8 +24,7 @@ services:
             - 9001
         volumes_from:
             - app
-        environment:
-            APPLICATION_ENV: '${APPLICATION_ENV}'
+        env_file: '.env'
         user: php:staff
 
     node:

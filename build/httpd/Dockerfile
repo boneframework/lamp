@@ -8,6 +8,7 @@ RUN apt-get -y --no-install-recommends install openssl ca-certificates
 
 RUN mkdir -p /etc/ssl/certs
 RUN mkdir -p /tmp_certs
+
 COPY ./certificates/* /tmp_certs
 RUN if [[ -e /tmp_certs/selfsigned.crt ]]; then \
        if [[ - e /tmp_certs/selfsigned.key]] ; then \
