@@ -3,7 +3,7 @@ volumes:
         driver: local
 
 services:
-    awesome.bone:
+    boneframework.docker:
         build:
             context: ./build
             dockerfile: ./httpd/Dockerfile
