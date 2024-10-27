@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+if [ -z $1 ]; then
+  echo '🪲 CLI XDebug toggle'
+  echo 'usage debug [on|off|coverage]'
+  exit 1
+fi
+
+if [[ $1 == 'on' ]]; then
+    echo ''
+    echo '🪲 enabling XDebug️, run the following:'
+    echo ''
+    echo "export XDEBUG_MODE=debug
+export XDEBUG_SESSION=PHPSTORM"
+    echo ''
+    exit 0;
+fi
+
+if [[  $1 == 'off'  ]]; then
+    echo ''
+    echo '🔻 disa️b️ling XDebug️, run the following:'
+    echo ''
+    echo "export XDEBUG_MODE=off
+unset XDEBUG_SESSION"
+    echo ''
+    exit 0
+fi
+
+if [[ $1 == 'coverage' ]]; then
+    echo ''
+    echo '🪲 enabling XDebug with coverage️, run the following:'
+    echo ''
+    echo "export XDEBUG_MODE=coverage
+export XDEBUG_SESSION=PHPSTORM"
+    echo ''
+    exit 0;
+fi
+
+echo '💀 Invalid argument.'
+exit 1
+
+

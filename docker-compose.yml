@@ -21,7 +21,6 @@ services:
             dockerfile: ./php/Dockerfile
         ports:
             - 9000
-            - 9001
         volumes_from:
             - app
         env_file: '.env'
