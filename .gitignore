@@ -1,4 +1,5 @@
 data/* 
+.a0proj/
 .DS_Store
 .idea/
 build/php/.DS_Store
