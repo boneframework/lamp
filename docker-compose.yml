@@ -1,6 +1,18 @@
 volumes:
     db_data:
         driver: local
+    a0_agents:
+        driver: local
+    a0_instruments:
+        driver: local
+    a0_knowledge:
+        driver: local
+    a0_memory:
+        driver: local
+    a0_prompts:
+        driver: local
+    a0_settings:
+        driver: local
 
 services:
     boneframework.docker:

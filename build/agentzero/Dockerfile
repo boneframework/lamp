@@ -1,4 +1,5 @@
-FROM node:24.11
+FROM agent0ai/agent-zero:v0.9.8
+RUN apt-get update
 
 # Install nvm (Node Version Manager)
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
@@ -22,4 +23,3 @@ RUN node --version
 # RUN pnpm --version 
 # RUN nvm --version
 
-WORKDIR /var/www/html
