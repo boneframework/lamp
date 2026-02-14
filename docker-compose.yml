@@ -50,6 +50,14 @@ services:
         image: httpd:2.4.38
         volumes:
             - ./code:/var/www/html
+            - /var/run/docker.sock:/var/run/docker.sock
+            - a0_agents:/a0/agents
+            - a0_instruments:/a0/instruments
+            - a0_knowledge:/a0/knowledge
+            - a0_memory:/a0/memory
+            - a0_prompts:/a0/prompts
+            - a0_settings:/a0/tmp/settings.json
+            - ../:/a0/usr/projects
         command: "echo true"
 
     mariadb:
@@ -69,3 +77,12 @@ services:
         ports:
             - 1025:1025
             - 8025:8025
+
+    agentzero:
+        build: ./build/agentzero
+        env_file:
+          - .env
+        ports:
+            - 50080:80
+        volumes_from:
+            - app
