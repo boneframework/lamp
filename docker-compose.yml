@@ -54,7 +54,7 @@ services:
             - a0_knowledge:/a0/knowledge
             - a0_memory:/a0/memory
             - a0_prompts:/a0/prompts
-            - ./data/settings.json:/a0/tmp/settings.json
+            - ./build/data/settings.json:/a0/tmp/settings.json
             - ../:/a0/usr/projects
         command: "echo true"
 

@@ -2,7 +2,7 @@
     "version": "v0.9.7-10",
     "chat_model_provider": "ollama",
     "chat_model_name": "qwen3:4b-q4_K_M",
-    "chat_model_api_base": "",
+    "chat_model_api_base": "http://host.docker.internal:11434",
     "chat_model_kwargs": {
         "temperature": "0",
         "num_ctx": 32768

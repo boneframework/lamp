@@ -18,6 +18,9 @@ RUN . "$NVM_DIR/nvm.sh" && \
 # Setup PNPM
 RUN wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.bashrc" SHELL="$(which bash)" bash -
 
+# install docker so we can call other containers from this one
+RUN apt-get install -y docker.io
+
 # Verify installations
 RUN node --version  
 # RUN pnpm --version 
