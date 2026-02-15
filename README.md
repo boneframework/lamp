@@ -6,7 +6,7 @@ A Dockerised LAMP stack
  - Docker based Linux server
  - Apache with self signed SSL certificate
  - MariaDB
- - PHP 8.3 and modules (see https://github.com/delboy1978uk/dockerhub/blob/master/php83/Dockerfile)
+ - PHP 8.4 and modules (see https://github.com/delboy1978uk/dockerhub/blob/master/php84/Dockerfile)
  - MailHog (port 1025 send, port 8025 in browser)
  - NodeJs 18
  
