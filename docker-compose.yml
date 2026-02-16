@@ -11,6 +11,8 @@ volumes:
         driver: local
     a0_prompts:
         driver: local
+    a0_skills:
+        driver: local
 
 services:
     boneframework.docker:
@@ -54,6 +56,7 @@ services:
             - a0_knowledge:/a0/knowledge
             - a0_memory:/a0/memory
             - a0_prompts:/a0/prompts
+            - a0_skills:/a0/skills
             - ./build/data/settings.json:/a0/tmp/settings.json
             - ../:/a0/usr/projects
         command: "echo true"
