@@ -1,18 +1,6 @@
 volumes:
     db_data:
         driver: local
-    a0_agents:
-        driver: local
-    a0_instruments:
-        driver: local
-    a0_knowledge:
-        driver: local
-    a0_memory:
-        driver: local
-    a0_prompts:
-        driver: local
-    a0_skills:
-        driver: local
 
 services:
     boneframework.docker:
@@ -45,20 +33,20 @@ services:
         ports:
             - 8080:8080
             - 3000:3000
+            - 19000:19000
+            - 19001:19001
+            - 19002:19002
 
     app:
         image: httpd:2.4.38
         volumes:
-            - ./code:/var/www/html
+            - ../projects/fizzbuzz:/var/www/html
+#            - ../projects/tuner:/var/www/html
+#            - ../projects/tak:/var/www/html
+#           - ../boneframework/bone-native-backend-api:/var/www/html
             - /var/run/docker.sock:/var/run/docker.sock
-            - a0_agents:/a0/agents
-            - a0_instruments:/a0/instruments
-            - a0_knowledge:/a0/knowledge
-            - a0_memory:/a0/memory
-            - a0_prompts:/a0/prompts
-            - a0_skills:/a0/skills
-            - ./build/data/settings.json:/a0/tmp/settings.json
-            - ../:/a0/usr/projects
+            - ../projects:/a0/usr/projects
+            - ./build/data/a0/usr:/a0/usr
         command: "echo true"
 
     mariadb:

@@ -1,0 +1,5 @@
+{
+  "title": "Tech Lead",
+  "description": "Research agent specializing in coding and creating technical tickets.",
+  "context": "Use this agent to research technical implementations and create detailed markdown tickets for the development team."
+}

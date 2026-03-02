@@ -1,0 +1,5 @@
+{
+  "title": "QA Agent",
+  "description": "Agent specialized in reviewing and testing code.",
+  "context": "Use this agent to review code, run tests, and verify that implementations meet requirements."
+}

@@ -1,0 +1,45 @@
+/a0/usr/agents:
+agent0	default  developer  _example  hacker  researcher
+
+/a0/usr/agents/agent0:
+agent.json  _context.md  prompts
+
+/a0/usr/agents/agent0/prompts:
+agent.system.main.role.md  agent.system.tool.response.md
+
+/a0/usr/agents/default:
+agent.json  _context.md
+
+/a0/usr/agents/developer:
+agent.json  _context.md  prompts
+
+/a0/usr/agents/developer/prompts:
+agent.system.main.communication.md  agent.system.main.role.md
+
+/a0/usr/agents/_example:
+extensions  prompts  tools
+
+/a0/usr/agents/_example/extensions:
+agent_init
+
+/a0/usr/agents/_example/extensions/agent_init:
+_10_example_extension.py
+
+/a0/usr/agents/_example/prompts:
+agent.system.main.role.md  agent.system.tool.example_tool.md
+
+/a0/usr/agents/_example/tools:
+example_tool.py  response.py
+
+/a0/usr/agents/hacker:
+agent.json  _context.md  prompts
+
+/a0/usr/agents/hacker/prompts:
+agent.system.main.environment.md  agent.system.main.role.md
+
+/a0/usr/agents/researcher:
+agent.json  _context.md  prompts
+
+/a0/usr/agents/researcher/prompts:
+agent.system.main.communication.md  agent.system.main.role.md
+(venv) root@229b7ad550fa:/a0/usr/workdir#
