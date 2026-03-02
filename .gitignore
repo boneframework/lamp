@@ -3,3 +3,4 @@ data/*
 .DS_Store
 .idea/
 build/php/.DS_Store
+build/data/a0/usr/chat/*
