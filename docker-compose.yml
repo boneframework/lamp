@@ -48,6 +48,8 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock
             - ../projects:/a0/usr/projects
             - ./build/data/a0/usr:/a0/usr
+            - /home/delboy1978uk/.ollama:/home/ubuntu/.ollama
+            - /home/delboy1978uk/.claude:/home/ubuntu/.claude
         command: "echo true"
 
     mariadb:
@@ -76,3 +78,28 @@ services:
             - 50080:80
         volumes_from:
             - app
+
+    ollama:
+        build:
+            context: ./build/ollama
+            dockerfile: Dockerfile
+        ports:
+            - 11434:11434
+        volumes_from:
+            - app
+        user: 1000:1000
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          # Use all available GPUs
+                          count: all
+                          capabilities: [gpu]
+        environment:
+            # Optional: Set specific CUDA devices
+            - NVIDIA_VISIBLE_DEVICES=all
+            - ANTHROPIC_AUTH_TOKEN=ollama
+            - ANTHROPIC_BASE_URL=http://localhost:11434
+            - ANTHROPIC_API_KEY=
+            - CLAUDE_CODE_MODEL=qgpt-oss:120b
