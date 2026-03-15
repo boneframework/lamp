@@ -40,7 +40,7 @@ services:
     app:
         image: httpd:2.4.38
         volumes:
-            -./code:/var/www/html
+            - ./code:/var/www/html
 #            - ../projects/fizzbuzz:/var/www/html
 #            - ../projects/tuner:/var/www/html
 #            - ../projects/tak:/var/www/html
