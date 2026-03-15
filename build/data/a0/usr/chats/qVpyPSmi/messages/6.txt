@@ -1,0 +1,27 @@
+Hola,
+
+**Resumen del estado actual**
+- **Rama activa**: `feature/optional-project-0011`
+- **Archivos sin seguimiento**: `check_project_null.php`, `list_tickets.php`
+- **Ramas disponibles**: gran número de ramas de características y correcciones (bugfix), lo que indica múltiples líneas de trabajo en curso.
+
+**Tickets abiertos (según JSON recibido)**
+- **ID 4 – Add Edit Ticket Button**
+  - Estado: `toscope`
+  - Rama asociada: `feature/add-edit-button-0010`
+  - Asignado a: `tech_lead`
+  - Según la regla de daily‑standup, los tickets con estado `toscope` necesitan ser *scoped* (investigación y especificaciones técnicas) antes de pasar a desarrollo.
+
+**Clasificación**
+- **Requiere investigación**: Ticket 4 (Add Edit Ticket Button).
+- **Listos para desarrollo**: Ningún ticket en la lista actual está marcado como listo (p.ej., `todo` o `in progress`).
+
+**Plan de acción**
+1. **Versionar archivos nuevos**: agregar y confirmar `check_project_null.php` y `list_tickets.php` en la rama actual y hacer push.
+2. **Revisar rama actual** (`feature/optional-project-0011`): validar que los cambios estén completos y, si es apropiado, crear un Pull Request o merge a `dev‑master`.
+3. **Asignar investigación**: notificar al Tech Lead que el ticket 4 necesita ser *scoped*. El Tech Lead debe completar el campo `developerInstructions` y definir criterios de aceptación con casillas sin marcar (`- [ ]`).
+4. **Crear ticket de desarrollo**: una vez que el Tech Lead haya completado el scoping, generar un nuevo ticket asignado al Developer con la rama `feature/add-edit-button-0010` preparada para implementación.
+5. **Monitorear otras ramas**: revisar las ramas listadas para identificar aquellas que ya fueron fusionadas o que están inactivas >30 días y considerar su eliminación para mantener el repositorio limpio.
+6. **Comunicación**: actualizar el tablero de tickets con el estado actual y compartir el plan con el equipo.
+
+Este resumen y plan deberían proporcionar una visión clara del trabajo pendiente y los próximos pasos. ¡Avancemos con la primera acción!

@@ -1,0 +1,5 @@
+{
+    "title": "Project Manager",
+    "description": "Agent specialized in product management, feature planning, and ticket coordination. Knows business logic but not technical implementation.",
+    "context": "Use this agent for handling incoming business requests (new features or bug tickets), handling existing tickets, or answering general questions about the project."
+}

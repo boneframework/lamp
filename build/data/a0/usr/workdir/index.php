@@ -1,3 +1,10 @@
+<?php
+
+declare(strict_types=1);
+
+require_once __DIR__ . '/SystemStatus.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -86,7 +93,7 @@
                             </svg>
                         </div>
                         <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">PHP Version</h3>
-                        <p class="text-2xl font-bold text-gray-900"><?php echo phpversion(); ?></p>
+                        <p class="text-2xl font-bold text-gray-900"><?php echo SystemStatus::getPhpVersion(); ?></p>
                     </div>
 
                     <!-- Server Time Card -->
@@ -97,7 +104,7 @@
                             </svg>
                         </div>
                         <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Current Server Time</h3>
-                        <p class="text-2xl font-bold text-gray-900"><?php echo date('Y-m-d H:i:s'); ?></p>
+                        <p class="text-2xl font-bold text-gray-900"><?php echo SystemStatus::getCurrentTime(); ?></p>
                     </div>
 
                     <!-- Memory Usage Card -->
@@ -108,7 +115,7 @@
                             </svg>
                         </div>
                         <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Memory Usage</h3>
-                        <p class="text-2xl font-bold text-gray-900"><?php echo round(memory_get_usage() / 1024 / 1024, 2) . ' MB'; ?></p>
+                        <p class="text-2xl font-bold text-gray-900"><?php echo SystemStatus::getFormattedMemoryUsage(); ?></p>
                     </div>
                 </div>
             </div>
@@ -125,7 +132,7 @@
                 <span>AgentZero</span>
             </div>
             <p class="text-sm text-gray-500">
-                &copy; <?php echo date('Y'); ?> Agent Zero. All rights reserved.
+                &copy; <?php echo SystemStatus::getCurrentYear(); ?> Agent Zero. All rights reserved.
             </p>
             <div class="flex items-center gap-6 text-gray-400">
                 <a href="#" class="hover:text-blue-600 transition-colors italic text-sm underline-offset-4 decoration-1 decoration-dotted">Twitter</a>

@@ -1,18 +1,18 @@
 {
     "version": "v0.9.8",
-    "chat_model_provider": "google",
-    "chat_model_name": "gemini-3-flash-preview",
-    "chat_model_api_base": "",
+    "chat_model_provider": "ollama",
+    "chat_model_name": "gpt-oss:120b",
+    "chat_model_api_base": "http://host.docker.internal:11434",
     "chat_model_kwargs": {
-        "temperature": "1",
-        "thinking_level": "high"
+        "temperature": "0.3",
+        "reasoning_effort": "high"
     },
-    "chat_model_ctx_length": 1048576,
+    "chat_model_ctx_length": 131072,
     "chat_model_ctx_history": 0.7,
     "chat_model_vision": true,
-    "chat_model_rl_requests": 1000,
-    "chat_model_rl_input": 1000000,
-    "chat_model_rl_output": 65536,
+    "chat_model_rl_requests": 0,
+    "chat_model_rl_input": 0,
+    "chat_model_rl_output": 0,
     "util_model_provider": "google",
     "util_model_name": "gemini-3-flash-preview",
     "util_model_api_base": "",

@@ -1,0 +1,39 @@
+r/LocalLLaMA on Reddit: Best open-source coder model for replacing Claude Code with Qwen locally?
+https://www.reddit.com/r/LocalLLaMA/comments/1rbvbzt/best_opensource_coder_model_for_replacing_claude/
+Feb 23, 2026 ... Claude is horribly inefficient with local models - not built for it. Cline with qwen3 coder next is a good combo - cline is much better ...
+
+Qwen 3.5: The Complete Guide - Benchmarks, Local Setup, and How It ...
+https://techie007.substack.com/p/qwen-35-the-complete-guide-benchmarks
+Agentic capabilities -the ability to plan, use tools, browse the web, and complete multi-step tasks - are increasingly the differentiator between good and great models. On Tau2-Bench, Qwen 3.5 scores 86.7, second only to Claude Opus 4.6 (91.6). Claude's lead here is significant and consistent with its reputation as the strongest agentic model. On BrowseComp (agentic web browsing), Qwen 3.5 ...
+
+Qwen/Qwen3-Coder-Next · Hugging Face
+https://huggingface.co/Qwen/Qwen3-Coder-Next
+We're on a journey to advance and democratize artificial intelligence through open source and open science.
+
+Qwen
+https://qwen.ai/blog?id=qwen3-coder-next
+... Qwen3-Coder-Next shows promising results on coding agent benchmarks, providing good speed and reasoning abilities for practical use. While it performs competitively—even compared to some larger open-source models—there is still much room for improvement.
+
+DeepSeek V4 and Qwen 3.5: Open-Source AI Is Rewriting the Rules in 2026
+https://particula.tech/blog/deepseek-v4-qwen-open-source-ai-disruption
+DeepSeek and Qwen now hold 15% of the global AI market—up from 1% a year ago. Here's what V4 and 3.5 actually deliver, what they cost, and when they beat proprietary models.
+
+Qwen 3 Coder: China's Open Source AI Model Competing with Claude
+https://canadiantechnologymagazine.com/qwen-3-coder-chinas-open-source-ai-coding-model-rivaling-anthropic-claude/
+In the rapidly evolving world of AI and coding models, a new player has emerged from China that's turning heads—and for good reason. Matthew Berman, a well-known AI enthusiast and content creator, recently showcased an open source coding model called Qwen 3 Coder that directly challenges the performance of Anthropic's Claude family of models. This breakthrough not only pushes the ...
+
+A 2025 Comparison of DeepSeek R1, Qwen 2.5 and Claude 3.7
+https://www.preprints.org/manuscript/202508.1904
+Aug 26, 2025 ... Figure 2 illustrates the cost-performance Pareto frontier. Qwen offers the best tradeoff, DeepSeek is free/open-weight with slightly lower ...
+
+GitHub - QwenLM/Qwen3-Coder: Qwen3-Coder is the code version of Qwen3 ...
+https://github.com/QwenLM/Qwen3-Coder
+Key Features 💻 Efficiency-Performance Tradeoff: among open models on Agentic Coding, Agentic Browser-Use, and other foundational coding tasks, achieving results comparable to Claude Sonnet. 🛠 Scaling Agentic Coding: supporting most platforms such as Qwen Code, CLINE, Claude Code, featuring a specially designed function call format;
+
+Claude Code vs. Gemini CLI vs. Cursor vs. Qwen Code - Medium
+https://medium.com/@fendylike/top-ai-coding-assistants-claude-code-vs-gemini-cli-vs-cursor-vs-qwen-code-0bc759fc9d45
+Jul 29, 2025 ... Qwen Code leverages the broader open-source AI community and integrates with multiple platforms including Claude Code and Cline. As part of the ...
+
+I Ditched Claude Code and Now Using Open Source Qwen AI for Real Sysadmin Work
+https://itsfoss.com/qwen-code-sysadmin-tasks/
+That’s what led me to Qwen Code. It positions itself as an open source, general-purpose alternative to Claude Code. I chose it because it's a very good model, can be installed locally and is free to use.

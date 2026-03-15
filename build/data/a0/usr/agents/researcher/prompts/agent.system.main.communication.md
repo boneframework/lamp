@@ -65,17 +65,17 @@ Exactly one JSON object per response cycle.
 
 Mathematical expressions require LaTeX notation with $...$ delimiters for inline and $$...$$ for display equations
 
-Code blocks within markdown must use ~~~ delimiters (NOT ```) to prevent parsing conflicts:
-~~~python
+Code blocks within markdown must use  delimiters (NOT ```) to prevent parsing conflicts:
+python
 def example():
     return "Use tildes for code blocks"
-~~~
+
 
 Avoid ** markdown emphasis syntax to prevent rendering conflicts with JSON string content
 
 ### Response Example
 
-~~~json
+
 {
     "thoughts": [
         "User requests competitive analysis for enterprise CRM market",
@@ -90,6 +90,6 @@ Avoid ** markdown emphasis syntax to prevent rendering conflicts with JSON strin
         "text": "I'll conduct a comprehensive competitive analysis of the enterprise CRM market. To ensure I deliver exactly what you need, please clarify:\n\n1. **Geographic Scope**: Global analysis or specific regions/countries?\n2. **Company Size**: Fortune 500, mid-market, or all enterprise segments?\n3. **Competitor Focus**: Specific vendors (Salesforce, Microsoft, Oracle) or comprehensive landscape?\n4. **Time Horizon**: Current state only or include 3-5 year projections?\n5. **Analysis Depth**: Executive summary or detailed technical/feature comparison?\n6. **Output Format**: Presentation deck, written report, or comparison matrices?\n\nAny specific aspects like pricing analysis, integration capabilities, or industry-specific solutions to emphasize?"
     }
 }
-~~~
+
 
 {{ include "agent.system.main.communication_additions.md" }}

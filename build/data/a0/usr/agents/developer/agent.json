@@ -1,5 +1,5 @@
 {
   "title": "Developer",
-  "description": "Agent specialized in executing work from markdown tickets.",
+  "description": "Agent specialized in executing work from project tickets using the ticket skill.",
   "context": "Use this agent to write code, implement features, and fix bugs based on provided technical specifications."
 }

@@ -1,0 +1,7 @@
+CONTAINER ID   IMAGE                       COMMAND                  CREATED        STATUS        PORTS                                                                                  NAMES
+1ffbbc57c432   lamp-php                    "docker-php-entrypoi…"   12 hours ago   Up 12 hours   0.0.0.0:54976->9000/tcp, [::]:54976->9000/tcp                                          lamp-php-1
+19066988945b   lamp-agentzero              "/exe/initialize.sh …"   12 hours ago   Up 12 hours   0.0.0.0:50080->80/tcp, [::]:50080->80/tcp                                              lamp-agentzero-1
+8b9b306bcfa5   lamp-boneframework.docker   "httpd-foreground"       12 hours ago   Up 12 hours   0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp               lamp-boneframework.docker-1
+95d257f5b4f1   mailhog/mailhog             "MailHog"                12 hours ago   Up 12 hours   0.0.0.0:1025->1025/tcp, :::1025->1025/tcp, 0.0.0.0:8025->8025/tcp, :::8025->8025/tcp   lamp-mail-1
+ed76ed83d5e8   mariadb:10.7.1              "docker-entrypoint.s…"   12 hours ago   Up 12 hours   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp                                              lamp-mariadb-1
+(venv) root@19066988945b:/a0/usr/projects/fizzbuzz#
