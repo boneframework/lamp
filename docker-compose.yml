@@ -42,7 +42,7 @@ services:
         volumes:
             - ./code:/var/www/html
             - ../projects/fizzbuzz:/tickets
-            - ../projects/octo:/var/www/lab
+            - ../projects/octo:/lab
 #            - ../projects/tak:/var/www/html
 #           - ../boneframework/bone-native-backend-api:/var/www/html
             - /var/run/docker.sock:/var/run/docker.sock
