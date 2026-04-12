@@ -1,4 +1,4 @@
-FROM agent0ai/agent-zero:v0.9.8
+FROM agent0ai/agent-zero:latest
 RUN apt-get update
 
 # Install nvm (Node Version Manager)
